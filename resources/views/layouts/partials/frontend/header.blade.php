@@ -78,21 +78,21 @@
                     <div class="header-search-cart-area">
                         <ul>
                             <li><a class="sidebar-trigger-search" href="#"><span class="icon_search"></span></a></li>
-                            <li class="currency-menu"><a href="#"><span class="icon_lock_alt"></span></a>
-                                <!--language dropdown-->
-                                <ul class="currency-dropdown">
-                                    <!--Language Currency Start-->
-                                    <li><a href="#">language</a>
-                                        <ul>
-                                            <li class="active"><a href="#"><img src="img/icon/en-gb.png" alt="">English</a></li>
-                                            <li><a href="#"><img src="img/icon/de-de.png" alt="">Bangla</a></li>
-                                        </ul>
-                                    </li>
-                                    <!--Language Currency End-->
-                                </ul>
-                                <!--Crunccy dropdown-->
-                            </li>
-                            <li class="mini-cart"><a href="#"><span class="icon_bag_alt"></span> <span class="cart-quantity">{{ $data['count'] }}</span> <span class="mini-cart-total">{{ $data['price'] }}</span></a>
+{{--                            <li class="currency-menu"><a href="#"><span class="icon_lock_alt"></span></a>--}}
+{{--                                <!--language dropdown-->--}}
+{{--                                <ul class="currency-dropdown">--}}
+{{--                                    <!--Language Currency Start-->--}}
+{{--                                    <li><a href="#">language</a>--}}
+{{--                                        <ul>--}}
+{{--                                            <li class="active"><a href="#"><img src="img/icon/en-gb.png" alt="">English</a></li>--}}
+{{--                                            <li><a href="#"><img src="img/icon/de-de.png" alt="">Bangla</a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </li>--}}
+{{--                                    <!--Language Currency End-->--}}
+{{--                                </ul>--}}
+{{--                                <!--Crunccy dropdown-->--}}
+{{--                            </li>--}}
+                            <li class="mini-cart"><a href="#"><span class="fa fa-cart-plus"></span> <span class="cart-quantity">{{ $data['count'] }}</span> <span class="mini-cart-total">{{ $data['price'] }}</span></a>
                                 <!--Mini Cart Dropdown Start-->
                                     @yield('mini-cart')
                                 <!--Mini Cart Dropdown End-->

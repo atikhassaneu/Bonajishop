@@ -53,8 +53,8 @@
                                         <span class="sticker">New</span>
                                         <div class="product-action">
                                             <ul>
-                                                <li class="cart" id="{{ $newArrivalProduct->id }}" data-price="{{ $newArrivalProduct->discounted_price == 0 ? $newArrivalProduct->price : $newArrivalProduct->discounted_price}}" ><a href="#" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
-                                                <li><a href="" title="View"><span class="fa fa-eye"></span></a></li>
+                                                <li class="cart" id="{{ $newArrivalProduct->id }}" data-price="{{ $newArrivalProduct->discounted_price == 0 ? $newArrivalProduct->price : $newArrivalProduct->discounted_price}}" ><a href="#" title="Add To Cart"><span class="fa fa-cart-plus"></span></a></li>
+                                                <li><a href="{{ route('product.show', $newArrivalProduct->slug) }}" title="View"><span class="fa fa-eye"></span></a></li>
 {{--                                                <li><a href="" title="Compare this Product"><span class="icon_datareport"></span></a></li>--}}
                                             </ul>
                                         </div>

@@ -23,14 +23,14 @@ jQuery('.header-menu-area nav').meanmenu({
     Sticky Menu Active
 -----------------------------------*/
 $(window).on('scroll',function() {
-if ($(this).scrollTop() >50){  
+if ($(this).scrollTop() >50){
     $('.header-sticky').addClass("is-sticky");
   }
   else{
     $('.header-sticky').removeClass("is-sticky");
   }
-});  
-/*---------------------------- 
+});
+/*----------------------------
     Sidebar Search Active
 -----------------------------*/
 function sidebarSearch() {
@@ -76,8 +76,8 @@ $('.hero-slider').owlCarousel({
         }
     }
 })
-/*------- 
-    Product Slider Active 
+/*-------
+    Product Slider Active
 ----------------------------------*/
  $('.product-slider').owlCarousel({
     smartSpeed: 1000,
@@ -102,8 +102,8 @@ $('.hero-slider').owlCarousel({
         }
     }
 })
-/*------- 
-    Deal Product Slider Active 
+/*-------
+    Deal Product Slider Active
 ----------------------------------*/
  $('.deal-produt-slider').owlCarousel({
     smartSpeed: 1000,
@@ -128,8 +128,8 @@ $('.hero-slider').owlCarousel({
         }
     }
 })
-/*------- 
-    Blog Slider Active 
+/*-------
+    Blog Slider Active
 ----------------------------------*/
  $('.blog-slider').owlCarousel({
     smartSpeed: 1000,
@@ -153,8 +153,8 @@ $('.hero-slider').owlCarousel({
         }
     }
 })
-/*------- 
-    List Product Slider Active 
+/*-------
+    List Product Slider Active
 ----------------------------------*/
  $('.list-product-slider').owlCarousel({
     smartSpeed: 1000,
@@ -178,8 +178,8 @@ $('.hero-slider').owlCarousel({
         }
     }
 })
-/*------- 
-    Modal Slider Active 
+/*-------
+    Modal Slider Active
 ----------------------------------*/
  $('.single-slide-menu').owlCarousel({
         smartSpeed: 1000,
@@ -205,7 +205,7 @@ $('.hero-slider').owlCarousel({
 //$('.modal').on('shown.bs.modal', function (e) {
 //    $('.single-slide-menu').resize();
 //})
-    
+
 $('.single-slide-menu a').on('click',function(e){
   e.preventDefault();
 
@@ -251,8 +251,8 @@ $('.single-slide-menu a').on('click',function(e){
         }
       }
     });
-/*------- 
-    Countdown Product Slider Active 
+/*-------
+    Countdown Product Slider Active
 ----------------------------------*/
  $('.countdown-product-slider').owlCarousel({
     smartSpeed: 1000,
@@ -276,8 +276,8 @@ $('.single-slide-menu a').on('click',function(e){
         }
     }
 })
-/*------- 
-    Testimonial Slider Active 
+/*-------
+    Testimonial Slider Active
 ----------------------------------*/
  $('.testimonial-slider').owlCarousel({
     smartSpeed: 1000,
@@ -301,18 +301,18 @@ $('.single-slide-menu a').on('click',function(e){
         }
     }
 })
-/*----------------------------------- 
-    Count Down Active 
-----------------------------------*/ 
+/*-----------------------------------
+    Count Down Active
+----------------------------------*/
 $('[data-countdown]:not(.pro-countdown-1)').each(function() {
 	var $this = $(this), finalDate = $(this).data('countdown');
 	$this.countdown(finalDate, function(event) {
 		$this.html(event.strftime('<div class="single-countdown-box"><span>%D</span>Day</div><div class="single-countdown-box"><span>%H</span>Hours</div><div class="single-countdown-box"><span>%M</span>Mins</div><div class="single-countdown-box"><span>%S</span>Secs</div>'));
 	});
 });
-/*----------------------------------- 
-    Count Down Active 
-----------------------------------*/ 
+/*-----------------------------------
+    Count Down Active
+----------------------------------*/
 $('[data-countdown].pro-countdown-1').each(function() {
 	var $this = $(this), finalDate = $(this).data('countdown');
 	$this.countdown(finalDate, function(event) {
@@ -360,7 +360,7 @@ $('[data-countdown].pro-countdown-1').each(function() {
         slidesToScoll: 1,
         prevArrow: '<button type="button" class="slick-prev"> <i class="fa fa-angle-left"></i> </button>',
         nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
-        
+
     });
 /*----------------------------------
     ScrollUp Active
@@ -371,7 +371,7 @@ $.scrollUp({
     scrollSpeed: 900,
     animation: 'fade'
 });
-/*------------------------------ 
+/*------------------------------
     Nice Select Active
 ---------------------------------*/
 $('select').niceSelect();
@@ -383,19 +383,19 @@ var amountprice = $('#amount');
 $(function() {
     sliderrange.slider({
         range: true,
-        min: 20,
-        max: 100,
-        values: [0, 100],
+        min: 100,
+        max: 1000,
+        values: [0, 1000],
         slide: function(event, ui) {
-            amountprice.val("$" + ui.values[0] + " - $" + ui.values[1]);
+            amountprice.val(ui.values[0] + " - " + ui.values[1] + " ৳");
         }
     });
-    amountprice.val("$" + sliderrange.slider("values", 0) +
-        " - $" + sliderrange.slider("values", 1));
+    amountprice.val(sliderrange.slider("values", 0) +
+        " - " + sliderrange.slider("values", 1)  + " ৳");
 });
-/*----------------------------------- 
-    Single Product Slide Menu Active 
---------------------------------------*/  
+/*-----------------------------------
+    Single Product Slide Menu Active
+--------------------------------------*/
 $('.product-details-images').each(function(){
         var $this = $(this);
         var $thumb = $this.siblings('.product-details-thumbs');
@@ -446,7 +446,7 @@ $('.product-details-images').each(function(){
               }
             }
           ]
-            
+
         });
     });
  /* Product Details 2 Images Slider */
@@ -513,9 +513,9 @@ $('.product-details-images').each(function(){
         ]
         });
     });
-/*------------------------------ 
+/*------------------------------
     Toggle Function Active
----------------------------------*/   
+---------------------------------*/
 /*--- showlogin toggle function ----*/
     $('#showlogin').on('click', function() {
         $('#checkout-login').slideToggle(900);
@@ -535,28 +535,28 @@ $('.product-details-images').each(function(){
         $('#ship-box-info').slideToggle(1000);
     });
 /* --------------------------------------------------------
-    FAQ Accordion 
-* -------------------------------------------------------*/ 
+    FAQ Accordion
+* -------------------------------------------------------*/
   $('.card-header a').on('click', function() {
     $('.card').removeClass('actives');
     $(this).parents('.card').addClass('actives');
   });
 /* --------------------------------------------------------
     Venobox Active
-* -------------------------------------------------------*/  
+* -------------------------------------------------------*/
   $('.venobox').venobox({
         border: '10px',
         titleattr: 'data-title',
         numeratio: true,
         infinigall: true
-    });  
+    });
 /*----------------------------------
-    EasyZoom Active       
-------------------------------------*/   
-var $easyzoom = $('.easyzoom').easyZoom();  
+    EasyZoom Active
+------------------------------------*/
+var $easyzoom = $('.easyzoom').easyZoom();
 /* --------------------------------------------------------
     Instafeed Active
-* -------------------------------------------------------*/ 
+* -------------------------------------------------------*/
 if($('#instagram-feed').length) {
     var feed = new Instafeed({
         get: 'user',

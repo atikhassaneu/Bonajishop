@@ -147,8 +147,8 @@
                                         <span class="sticker">New</span>
                                         <div class="product-action">
                                             <ul>
-                                                <li class="cart" id="{{ $product->id }}" data-price="{{ $product->discounted_price == 0 ? $product->price : $product->discounted_price}}" ><a href="" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
-                                                <li><a href="" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                <li class="cart" id="{{ $product->id }}" data-price="{{ $product->discounted_price == 0 ? $product->price : $product->discounted_price}}" ><a href="" title="Add To Cart"><span class="fa fa-cart-plus"></span></a></li>
+                                                <li><a href="{{ route('product.show', $product->slug) }}" title="View"><span class="fa fa-eye"></span></a></li>
                                             </ul>
                                         </div>
                                     </div>
