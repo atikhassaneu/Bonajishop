@@ -47,6 +47,9 @@
                                 </td>
                             </tr>
                         @endforeach
+                        <tr>
+                            <td colspan="6"> {{ $orders->links() }} </td>
+                        </tr>
                         </tbody>
                     @else
                         {{"No order available !!"}}
@@ -55,7 +58,7 @@
                 </table>
             </div>
         </div>
-        <div class="card-footer small text-muted">{{ $orders->links() }} </div>
+        <div class="card-footer small text-muted"> Last Updated Today at {{ \Carbon\Carbon::now()->format('h:m:s') }}</div>
     </div>
 
 

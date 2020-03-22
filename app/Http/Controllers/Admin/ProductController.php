@@ -15,7 +15,7 @@ class ProductController extends Controller
 
     public function index()
     {
-        $products = Product::where('visibility', 1)->get();
+        $products = Product::where('visibility', 1)->paginate(5);
 //        return view('test');
         return view('admin.product.index',compact('products'));
     }
@@ -94,7 +94,7 @@ class ProductController extends Controller
         $product->short_description = $request->productShortDescription;
         $product->description       = $request->productDescription;
         $product->thumbnail         = $thumbnail_image_name;
-        $product->slug              = $this->slug($request->slug);
+        $product->slug              = $this->slug($request->productTitle);
         $product->stock             = $request->stock;
         $product->status             = $request->status;
         $product->tag               = $request->productTag;
@@ -203,7 +203,7 @@ class ProductController extends Controller
         $product->short_description = $request->productShortDescription;
         $product->description       = $request->productDescription;
         $product->thumbnail         = $thumbnail_image_name;
-        $product->slug              = $this->slug($request->slug);
+        $product->slug              = $this->slug($request->productTitle);
         $product->stock             = $request->stock;
         $product->status             = $request->status;
         $product->tag               = $request->productTag;
@@ -262,7 +262,7 @@ class ProductController extends Controller
 
     private function slug($string){
         $string     = str_replace(' ','-',$string); // replace space by hyphens
-        $string     = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+        //$string     = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
         return $string;
     }
 }

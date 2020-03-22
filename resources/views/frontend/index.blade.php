@@ -1,5 +1,7 @@
 @extends('layouts.frontend')
-
+@section('mini-cart')
+    @include('layouts.partials.frontend.cart')
+@endsection
 
 @section('content')
 
@@ -52,16 +54,14 @@
                                         <div class="product-action">
                                             <ul>
                                                 <li class="cart" id="{{ $newArrivalProduct->id }}" data-price="{{ $newArrivalProduct->discounted_price == 0 ? $newArrivalProduct->price : $newArrivalProduct->discounted_price}}" ><a href="#" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
-                                                <li><a href="" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                <li><a href="" title="View"><span class="fa fa-eye"></span></a></li>
 {{--                                                <li><a href="" title="Compare this Product"><span class="icon_datareport"></span></a></li>--}}
                                             </ul>
                                         </div>
-                                        <ul class="product-quickview"  id="{{ $newArrivalProduct->id }}" >
-                                            <li><a href="" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
-                                        </ul>
+
                                     </div>
                                     <div class="product-content">
-                                        <h4><a href="">{{ $newArrivalProduct-> title }}</a></h4>
+                                        <h4><a href="{{ route('product.show', $newArrivalProduct->slug) }}">{{ $newArrivalProduct-> title }}</a></h4>
                                         <div class="product-price">
 
                                             @if($newArrivalProduct->discounted_price == 0)
@@ -176,5 +176,5 @@
 
 
 @push('js')
-    <script src="{{asset('frontend/js/cartindex.js')}}"></script>
+    <script src="{{asset('frontend/js/cart.js')}}"></script>
 @endpush

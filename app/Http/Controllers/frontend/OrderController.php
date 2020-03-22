@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Cart;
+use App\Category;
 use App\DeliveryCharge;
 use App\Order;
 use App\OrderDetails;
@@ -14,6 +15,7 @@ class OrderController extends Controller
     public function index(){
         $data = [];
         $price = 0;
+        $categories = Category::where('parent_id', 0)->get();
         $carts = Cart::where('session_id', session()->getId())->get();
         $delivery_charge_items =  DeliveryCharge::all();
 
@@ -26,7 +28,7 @@ class OrderController extends Controller
         $data['price'] = $price;
         $data['count'] = count($carts);
 
-        return view('frontend.order', compact('data', 'carts', 'delivery_charge_items'));
+        return view('frontend.order', compact('data', 'carts', 'delivery_charge_items', 'categories'));
 
     }
 
@@ -60,7 +62,7 @@ class OrderController extends Controller
         foreach ($carts as $cart){
             $total = $total + $cart->price;
         }
-        $total = $total + $delivery_charge;
+        //$total = $total + $delivery_charge;
 
         $order = new Order();
         $order->name = $name;

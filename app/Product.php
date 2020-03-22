@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    public function Image(){
+    public function image(){
         return $this->hasOne("App\ProductImage");
     }
 
@@ -16,6 +16,10 @@ class Product extends Model
 
     public function orderDetails(){
         return $this->hasMany('App\OrderDetails', 'product_id');
+    }
+
+    public function category(){
+        return $this->belongsTo('App\Category');
     }
 
 }

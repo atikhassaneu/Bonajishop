@@ -11,7 +11,7 @@ Version: 1.0;
     CSS INDEX
     ================
 
-    
+
     1. Default CSS
         1.1 General
         1.2 Section title
@@ -45,7 +45,7 @@ Version: 1.0;
     17. Shop Page CSS
     18. Single Product Page CSS
     19. Wishlist Page CSS
-    20. Cart Page CSS 
+    20. Cart Page CSS
     21. Checkout Page CSS
     22. Login Register Page CSS
     23. My Account Page CSS
@@ -54,8 +54,8 @@ Version: 1.0;
     26. About Page CSS
     27. Contact Page CSS
     28. 404 Page CSS
-    
-        
+
+
 
 
 
@@ -101,10 +101,10 @@ input {
     outline: medium none;
     color: #434343;
 }
-.uppercase { 
+.uppercase {
     text-transform: uppercase
 }
-.capitalize { 
+.capitalize {
     text-transform: capitalize
 }
 h1,
@@ -126,8 +126,8 @@ h2 a,
 h3 a,
 h4 a,
 h5 a,
-h6 a { 
-    color: inherit; 
+h6 a {
+    color: inherit;
 }
 h1 {
     font-size: 36px;
@@ -529,7 +529,7 @@ textarea:focus {
 
 
 /***************************
-    Page section padding 
+    Page section padding
 ****************************/
 .ptb-0 { padding: 0 }
 .ptb-10 { padding: 10px 0 }
@@ -549,7 +549,7 @@ textarea:focus {
 .ptb-150 { padding: 150px 0 }
 
 /***************************
-    Page section margin 
+    Page section margin
 ****************************/
 .mtb-0 { margin: 0 }
 .mtb-10 { margin: 10px 0 }
@@ -569,7 +569,7 @@ textarea:focus {
 .mtb-140 { margin: 140px 0 }
 .mtb-150 { margin: 150px 0; }
  /*************************************
-    Background variation set 
+    Background variation set
  **************************************/
 /*colored background*/
  .white-bg { background: #fff !important; }
@@ -582,7 +582,7 @@ textarea:focus {
 
 /*Opacity background*/
  .bg-opacity-black-10:before, .bg-opacity-black-20:before, .bg-opacity-black-30:before, .bg-opacity-black-40:before, .bg-opacity-black-50:before, .bg-opacity-black-60:before, .bg-opacity-black-70:before, .bg-opacity-black-80:before, .bg-opacity-black-90:before,  .bg-opacity-white-10:before,  .bg-opacity-white-20:before,  .bg-opacity-white-30:before,  .bg-opacity-white-40:before,  .bg-opacity-white-50:before,  .bg-opacity-white-60:before,  .bg-opacity-white-70:before,  .bg-opacity-white-80:before,  .bg-opacity-white-90:before{
-    content: ""; height: 100%; left: 0; position: absolute; top: 0; width: 100%; z-index: -1; 
+    content: ""; height: 100%; left: 0; position: absolute; top: 0; width: 100%; z-index: -1;
  }
  .bg-opacity-black-10:before {  background: rgba(0, 0, 0, 0.1);}
  .bg-opacity-black-20:before {  background: rgba(0, 0, 0, 0.2);}
@@ -631,14 +631,14 @@ img{
     visibility: hidden;
     overflow: hidden;
     opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 .tab-content .tab-pane.active {
     height: auto;
     visibility: visible;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    overflow: visible; 
+    overflow: visible;
 }
 .vbox-close {
 	background: #2a6f31 url("close.gif") no-repeat scroll 10px center !important;
@@ -791,7 +791,7 @@ img{
     2.2 Deafult Headre Area CSS
 -----------------------------*/
 .logo-area {
-	padding: 20px 0;
+	padding: 5px 0;
 }
 .main-menu > li {
 	list-style: none;
@@ -1958,7 +1958,7 @@ ul.cart-items > li {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     visibility: visible;
 }
-.sticker, 
+.sticker,
 .descount-sticker {
 	color: #343434;
 	font-weight: 500;
@@ -3004,7 +3004,7 @@ h2.entry-title:before {
 }
 .social-link ul li a:hover{
     color: #2a6f31;
-} 
+}
 .desc-footer p {
 	font-size: 14px;
 	line-height: 26px;
@@ -3184,7 +3184,7 @@ h2.entry-title:before {
 }
 .custom-link-footer ul li a:hover{
     color: #2a6f31;
-} 
+}
 .custom-link-footer ul li a:after {
 	content: "";
 	width: 4px;
@@ -4077,7 +4077,7 @@ max-width: none !important;
 .dec-and-review-menu {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
-	        justify-content: center; 
+	        justify-content: center;
 }
 .dec-and-review-menu > li {
 	list-style: none;
@@ -4384,7 +4384,7 @@ max-width: none !important;
     display: inline-block;
 }
 /*-------------------------
-     19. Wishlist Page CSS 
+     19. Wishlist Page CSS
 ---------------------------*/
 .table-content table {
 	background: #fff none repeat scroll 0 0;
@@ -4452,7 +4452,7 @@ max-width: none !important;
     color: #fff;
 }
 /*-------------------------
-     20. Cart Page CSS 
+     20. Cart Page CSS
 ---------------------------*/
 .indecor-product-quantity input {
 	border: none;
@@ -4555,7 +4555,7 @@ max-width: none !important;
     border-color: #1c4a21;
 }
 /*-------------------------
-     21. Checkout Page CSS 
+     21. Checkout Page CSS
 ---------------------------*/
 .coupon-accordion h3 {
 	background-color: #f7f6f7;
@@ -5106,7 +5106,7 @@ input.checkbox {
 	color: #fff;
 }
 /*-------------------------
-      24. FAQ Page CSS 
+      24. FAQ Page CSS
 ---------------------------*/
 .faq-desc {
 	margin-bottom: 50px;
@@ -5285,7 +5285,7 @@ input.checkbox {
 	font-size: 14px;
 }
 /*-------------------------
-     26. About Page CSS 
+     26. About Page CSS
 ---------------------------*/
 .about-us-content h2 {
 	font-size: 36px;
@@ -5383,7 +5383,7 @@ input.checkbox {
             transform: scaleY(1);
 }
 /*-------------------------
-     27. Contact Page CSS 
+     27. Contact Page CSS
 ---------------------------*/
 .store-information {
 	color: #333;
@@ -5462,7 +5462,7 @@ input.checkbox {
     color: #ff1313;
 }
 /*-------------------------
-     28. 404 Page CSS 
+     28. 404 Page CSS
 ---------------------------*/
 .error-text > h1 {
 	font-size: 200px;

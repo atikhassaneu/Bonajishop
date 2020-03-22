@@ -62,8 +62,8 @@
                                 <div class="cart-page-total">
                                     <h2>Cart totals</h2>
                                     <ul>
-                                        <li>Subtotal <span id="cart-subtotel-price">{{ $data['price'] }} </span></li>
-                                        <li>Total <span id="cart-total-price">{{ $data['price'] }}</span></li>
+                                        <li>Subtotal <span id="subtotel-price">{{ $data['price'] }} </span></li>
+                                        <li>Total <span id="total-price">{{ $data['price'] }}</span></li>
                                     </ul>
                                     <a id="update_cart" href="#">Update Cart</a>
                                     <a href="{{ route('order') }}">Proceed to checkout</a>

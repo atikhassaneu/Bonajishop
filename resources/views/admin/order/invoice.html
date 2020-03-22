@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+    <title>Invoice</title>
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Hind Siliguri', 'open sans';
+            font-size: 16px;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .clear{
+            clear: both;
+        }
+        .header{
+            width: 100%;
+        }
+
+        .header .header-top{
+            line-height: 14px;
+            text-align: center;
+        }
+        .header .header-top img{
+            width: 120px;
+        }
+        .invoice-to{
+            padding-left: 10px;
+        }
+        .invoice-id-date{
+            padding-right: 10px;
+        }
+        .product-details{
+            width: 100%;
+            padding: 30px 15px;
+        }
+        .table{
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        .table th, td{
+            padding: 5px;
+            border: 1px solid #f2f2f2;
+        }
+
+        .table th:nth-child(1){
+            width: 60%;
+        }
+        .table th:nth-child(2){
+            width: 10%;
+        }
+        .table th:nth-child(3){
+            width: 10%;
+        }
+        .table th:nth-child(2){
+            width: 15%;
+        }
+        .total{
+            margin-top: 20px;
+            text-align: left;
+            width: 320px;
+            float: right;
+        }
+
+        .footer{
+            width: 100%;
+            display: block;
+            margin-top: 150px;
+            min-height: 150px;
+        }
+
+        .footer .authorized-signeture{
+            width: 300px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            text-align: center;
+
+        }
+        .footer .authorized-signeture span{
+            display: block;
+            width: 300px;
+            height: 2px;
+            background: #f2f2f2;
+        }
+
+        .footer .thank-you{
+            text-align: center;
+        }
+        .footer .thank-you span{
+            display: inline-block;
+            width: 150px;
+            height: 1px;
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <img src="logo.png">
+            <P>880 1713615831</P>
+            <p>Mohammadpur Dhaka-1207</p>
+
+        </div>
+            
+        <div class="invoice-to left">
+            <h3>Invoice To:</h3>
+            <b>Atik Hassan</b>
+            <p>593/c Khilgaon, Dhaka-1219</p>
+        </div>
+        <div class="invoice-id-date right">
+            <p><b>Invoice ID : #</b> 1248358</p>
+            <p><b>Data : </b> 10-10-2020</p>
+        </div>
+    </header>
+
+    <div class="product-details clear">
+        <h4>Product Details</h4>
+        <table class="table">
+            <tr>
+                <th>Product Title</th>
+                <th>Unit Price</th>
+                <th>QTY</th>
+                <th>Total Price</th>
+            </tr>
+            <tr>
+                <td>IPhone X</td>
+                <td>70000</td>
+                <td>1</td>
+                <td>70000</td>
+            </tr>
+        </table>
+
+        <table class="table total">
+            <tr><th colspan="2">Total</th></tr>
+            <tr>
+                <td width="50%">Subtotal</td>
+                <td class="text-center" width="50%">500</td>
+            </tr>
+            <tr>
+                <td>Delivery Charge</td>
+                <td class="text-center">50</td>
+            </tr>
+            <tr>
+                <td><b>Total</b></td>
+                <td class="text-center"><b>400</b></td>
+            </tr>
+        </table>
+    </div>
+    <div class="clear"></div>
+    <section class="footer">
+        <div class="terms-and-condition">
+            <h4>Terms & Condition</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore </p>
+        </div>
+        <div class="authorized-signeture right">
+            <span></span>
+            <p><b>Authorised Sign</b></p>
+        </div>
+        <div class="thank-you clear">
+            <span></span> Thank You <span></span>
+        </div>
+    </section>
+    
+</body>
+</html>

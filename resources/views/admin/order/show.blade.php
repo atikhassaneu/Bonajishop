@@ -4,6 +4,7 @@
 
 @section('title-btn')
     <a href="{{route('admin.order.index')}}" class="btn btn-info">Back To Order</a>
+    <a  target="_blank" href="{{route('admin.order.invoice', $order->id)}}" class="btn btn-dark ml-2">Generate Invoice</a>
 @endsection
 
 
@@ -28,17 +29,14 @@
                             </tr>
                         </thead>
                         <tbody>
-
+                                   @php $subtotal = 0  @endphp
                                    @foreach($order->orderDetails as $orderItemDetail)
+                                       @php $subtotal = $subtotal + $orderItemDetail->product->price * $orderItemDetail->quantity @endphp
                                        <tr>
-                                           @php
-                                               $price = $orderItemDetail->product->discounted_price == 0? $orderItemDetail->product->price : $orderItemDetail->product->discounted_price;
-                                                $quantity = $orderItemDetail->quantity;
-                                           @endphp
                                            <td>{{ $orderItemDetail->product->title }}</td>
-                                           <td>{{ $price }}</td>
-                                           <td>{{ $quantity }}</td>
-                                           <td>{{ $price * $quantity }}</td>
+                                           <td>{{ $orderItemDetail->product->price }}</td>
+                                           <td>{{ $orderItemDetail->quantity  }}</td>
+                                           <td>{{ $orderItemDetail->product->price * $orderItemDetail->quantity }}</td>
                                        </tr>
                                    @endforeach
 
@@ -55,20 +53,79 @@
                             <table class="table">
                                 <tr>
                                     <td width="68%">subtotal</td>
-                                    <td>{{ $order->total_price - $order->delivery_charge }}</td>
+                                    <td>{{ $subtotal }}</td>
                                 </tr>
+                                <tr>
+                                    <td>Discount</td>
+                                    <td>{{ $subtotal - $order->total_price }}</td>
+                                </tr>
+
                                 <tr>
                                     <td>Delivery Charge</td>
                                     <td>{{ $order->delivery_charge }}</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Total</b></td>
-                                    <td><b>{{ $order->total_price }}</b></td>
+                                    <td><b>Amount to pay</b></td>
+                                    <td><b>{{ $order->total_price + $order->delivery_charge }}</b></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                 </div>
+
+                <table class="table">
+                    <thead>
+                        <h5 class="mb-3">Billing Information</h5>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td width="20%" class="pl-md-5">Name </td>
+                            <td>{{ $order->name }}</td>
+                        </tr>
+                        <tr>
+                            <td class="pl-md-5">Email </td>
+                            <td>{{ $order->email }}</td>
+                        </tr>
+                        <tr>
+                            <td class="pl-md-5">Phone </td>
+                            <td>{{ $order->phone }}</td>
+                        </tr>
+                        <tr>
+                            <td class="pl-md-5">Address </td>
+                            <td>{{ $order->address }}</td>
+                        </tr>
+                        <tr>
+                            <td class="pl-md-5">Post Code </td>
+                            <td>{{ $order->post_code }}</td>
+                        </tr>
+                        <tr>
+                            <td class="pl-md-5">City </td>
+                            <td>{{ $order->city }}</td>
+                        </tr>
+                        <tr>
+                            <td class="pl-md-5">Payment Method</td>
+                            <td>{{ $order->payment_method }}</td>
+                        </tr>
+                        @if($order->bkash_verification_code)
+                            <tr>
+                                <td class="pl-md-5">Bkash Transaction ID </td>
+                                <td>{{ $order->bkash_verification_code }}</td>
+                            </tr>
+                        @endif
+                    </tbody>
+                </table>
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="col-md-6">
                     <form action="{{ route('admin.order.update', $order->id) }}" method="post">
                         @csrf

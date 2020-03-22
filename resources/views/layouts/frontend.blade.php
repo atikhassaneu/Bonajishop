@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="">
     <!--All Css Here-->
 
     <!-- Elegant Icon Font CSS-->
@@ -54,7 +54,7 @@
                             <!--Single Footer Wiedget Start-->
                             <div class="single-footer-wiedget mb-30">
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="img/logo/logo.png" alt=""></a>
+                                    <a href=""><img width="100px" src="{{ asset('frontend/img/logo/logo.png') }}" alt=""></a>
                                 </div>
                                 <div class="social-link">
                                     <ul>

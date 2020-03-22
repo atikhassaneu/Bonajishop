@@ -138,6 +138,11 @@
       <path value="$PROJECT_DIR$/vendor/unisharp/laravel-filemanager" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
     </include_path>
   </component>
   <component name="ProjectId" id="1WL3OEFOlNW5ui9dxC3jBuGdHwE" />
@@ -147,21 +152,22 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dom-pdf-invoice" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/frontend/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\laravel\Bonajishop\public\frontend\js" />
+      <recent name="C:\wamp64\www\laravel\Bonajishop\public\frontend\img\logo" />
+      <recent name="C:\wamp64\www\laravel\Bonajishop\public\frontend\img" />
       <recent name="C:\wamp64\www\laravel\Bonajishop\public\uploads\product\small" />
       <recent name="C:\wamp64\www\laravel\Bonajishop\public\frontend\css" />
-      <recent name="C:\wamp64\www\laravel\Bonajishop\public\frontend" />
-      <recent name="C:\wamp64\www\laravel\Bonajishop\resources\views\admin\trash\category" />
-      <recent name="C:\wamp64\www\laravel\Bonajishop\resources\views\admin\trash\slider" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\laravel\Bonajishop\public\frontend\img\logo" />
       <recent name="C:\wamp64\www\laravel\Bonajishop\resources\views\admin\trash\product" />
     </key>
   </component>
@@ -257,17 +263,36 @@
       <workItem from="1582527630953" duration="2352000" />
       <workItem from="1582551747178" duration="4844000" />
       <workItem from="1582609951816" duration="1544000" />
+      <workItem from="1582709014345" duration="4076000" />
+      <workItem from="1582713526888" duration="2394000" />
+      <workItem from="1582724762259" duration="3191000" />
+      <workItem from="1582785441989" duration="5768000" />
+      <workItem from="1582807708404" duration="6258000" />
+      <workItem from="1583135722762" duration="9716000" />
+      <workItem from="1583218135866" duration="3580000" />
+      <workItem from="1583233908792" duration="6842000" />
+      <workItem from="1583304828132" duration="4942000" />
+      <workItem from="1583325430694" duration="4156000" />
+      <workItem from="1583335113190" duration="2776000" />
+      <workItem from="1583653889227" duration="4877000" />
+      <workItem from="1583735709703" duration="599000" />
+      <workItem from="1583743232958" duration="1885000" />
+      <workItem from="1583826564648" duration="2198000" />
+      <workItem from="1583835168233" duration="594000" />
+      <workItem from="1583840263472" duration="5658000" />
+      <workItem from="1583930793125" duration="4822000" />
+      <workItem from="1583996915756" duration="15066000" />
+      <workItem from="1584264501385" duration="7969000" />
+      <workItem from="1584277190751" duration="1597000" />
+      <workItem from="1584351942172" duration="9089000" />
+      <workItem from="1584426091302" duration="1836000" />
+      <workItem from="1584432228389" duration="7715000" />
+      <workItem from="1584512996541" duration="6372000" />
+      <workItem from="1584600311820" duration="1423000" />
+      <workItem from="1584607717223" duration="9068000" />
+      <workItem from="1584860627712" duration="17240000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />

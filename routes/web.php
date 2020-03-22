@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 // frontend
 Route::get('/', 'frontend\ProductController@index')->name('home');
+Route::get('product/category/{category}', 'frontend\CategoryController@index')->name('product.show.category');
+Route::get('product/{slug}', 'frontend\ProductController@show')->name('product.show');
 Route::get('cart', 'frontend\CartController@viewCart')->name('cart.view');
 Route::get('order', 'frontend\OrderController@index')->name('order');
 Route::get('contact', 'frontend\ContactController@index')->name('contact');
@@ -25,8 +27,8 @@ Route::post('order-confirm', 'frontend\OrderController@orderConfirm')->name('ord
 
 //Route ajax request
 Route::get('ajax/product/{id}', 'frontend\ProductController@showModalData');
-Route::get('ajax/cart/{product_id}', 'frontend\CartController@addToCart');
-Route::get('ajax/cart/remove/{product_id}', 'frontend\CartController@removeFromCart');
+Route::get('ajax/cart/{product_id}/{quantity?}', 'frontend\CartController@addToCart');
+Route::get('ajax/remove-cart/{product_id}', 'frontend\CartController@removeFromCart');
 Route::get('ajax/cart-update', 'frontend\CartController@cartUpdate');
 
 Auth::routes();
@@ -38,6 +40,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth', 'prefix' => 'admin
     Route::get('order/{id}/edit', 'OrderController@edit')->name('order.edit');
     Route::put('order/{id}/edit', 'OrderController@update')->name('order.update');
     Route::delete('order/{id}/destroy', 'OrderController@destroy')->name('order.destroy');
+    Route::get('order/{id}/invoice', 'OrderController@invoice')->name('order.invoice');
 
     Route::get('contact', 'ContactController@index')->name('contact.index');
     Route::get('contact/{id}/show', 'ContactController@show')->name('contact.show');

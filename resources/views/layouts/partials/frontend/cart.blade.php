@@ -7,8 +7,8 @@
                         </div>
                         <div class="cart-content">
                             <h5 class="product-name"><a href="">{{ $item->product->title }}</a></h5>
-                            <span class="product-quantity">{{ $item->quantity }} ×</span>
-                            <span class="product-price">{{ $item->price }}</span>
+                            <span class="product-quantity pq-{{$item->id}}">{{ $item->quantity }} ×</span>
+                            <span class="product-price pp-{{$item->id}}">{{ $item->price }}</span>
                         </div>
                         <div class="cart-item-remove remove-item-from-cart" id="{{ $item->id }}" data-price="{{ $item->discounted_price == 0 ? $item->price : $item->discounted_price}}">
                             <a title="Remove"  href="#"><i class="fa fa-trash"></i></a>

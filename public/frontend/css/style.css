@@ -794,7 +794,7 @@ img{
     2.2 Deafult Headre Area CSS
 -----------------------------*/
 .logo-area {
-	padding: 54px 0;
+	/*padding: 10px 0;*/
 }
 .main-menu > li {
 	list-style: none;
@@ -1182,6 +1182,7 @@ ul.cart-items > li {
 .cart-content > span.product-price {
 	color: #ff7a5f;
 	font-size: 16px;
+    display: inline;
 }
 .product-name {
 	color: #222;
@@ -3401,7 +3402,7 @@ h2.entry-title:before {
    16. Breadcrumb Area CSS
 -----------------------------*/
 .breadcrumb-bg {
-	background-image: url(img/bg/breadcrumb.jpg);
+	background-image: url('../img/bg/breadcrumb.jpg');
 	padding: 80px 0;
 	background-position: center center;
 	background-size: cover;

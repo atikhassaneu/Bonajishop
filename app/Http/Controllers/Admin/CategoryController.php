@@ -11,7 +11,7 @@ class CategoryController extends Controller
 
     public function index()
     {
-        $categories = Category::where('visibility',1)->get();
+        $categories = Category::where('visibility',1)->paginate(10);
         return view('admin.category.index',compact('categories'));
     }
 

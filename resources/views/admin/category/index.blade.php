@@ -30,7 +30,6 @@
                         <th width="35%">Parent Category</th>
                         <th width="5%">Status</th>
                         <th width="20%">Action</th>
-
                     </tr>
                     </thead>
 
@@ -39,7 +38,7 @@
                             <tr>
                                 <td>{{ ++$key }}</td>
                                 <td>{{$category->category }}</td>
-                                <td>@if(\App\Category::find($category->id)->parentCategory !== null)  {{ \App\Category::find($category->id)->parentCategory->category }} @endif</td>
+                                <td>{{ $category->parent_id != 0 ? $category->parent->category : '' }}</td>
 
                                 <td>
                                     @if($category->status == 1)
@@ -57,6 +56,10 @@
                                 </td>
                             </tr>
                         @endforeach
+                    <tr>
+                        <td colspan="5">{{ $categories->links() }}</td>
+                    </tr>
+
                     </tbody>
                     @else
                         {{"No category available !!"}}

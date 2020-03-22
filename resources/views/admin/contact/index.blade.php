@@ -53,6 +53,9 @@
                                 </td>
                             </tr>
                         @endforeach
+                            <tr>
+                                <td colspan="6">{{ $contacts->links() }}</td>
+                            </tr>
                         </tbody>
                     @else
                         {{"No contact available !!"}}

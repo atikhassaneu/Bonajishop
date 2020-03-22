@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Cart;
+use App\Category;
 use App\Product;
 use App\Slider;
 use http\Env\Response;
@@ -15,37 +16,41 @@ class ProductController extends Controller
     {
         $data = [];
         $price = 0;
+        $categories = Category::where('parent_id', 0)->get();
         $carts = Cart::where('session_id', session()->getId())->get();
         $newArrivalProducts = Product::where('visibility',1 )->orderBy('id', 'DESC')->take(10)->get();
         $sliders = Slider::where('visibility', 1)->orderBy('id', 'DESC')->take(3)->get();
         $products = Product::where('visibility', 1)->orderBy('id', 'DESC')->take(6)->get();
 
         foreach ($carts as $cart){
-            $price = $price + $cart->price;
+            $price = $price + $cart->price * $cart->quantity;
             $cart->price;
-
         }
 
 
         $data['price'] = $price;
         $data['count'] = count($carts);
 
-
-        return view('frontend.index', compact('sliders','products', 'newArrivalProducts', 'carts', 'data'));
+        return view('frontend.index', compact('sliders','products', 'newArrivalProducts', 'carts', 'categories', 'data'));
     }
 
 
 
+    public function show($slug){
+        $product = Product::where('slug', $slug)->first();
+        $related_products = Product::where('category_id', $product->category->id)->Where('id', '!=' ,$product->id)->take(8)->get();
 
-    public function showModalData($id){
-
-        $product = Product::find($id);
-        if ($product){
-            $image   = Product::find($id)->image;
-
-            return response()->json($product);
+        $data = [];
+        $price = 0;
+        $categories = Category::where('parent_id', 0)->get();
+        $carts = Cart::where('session_id', session()->getId())->get();
+        foreach ($carts as $cart){
+            $price = $price + $cart->price * $cart->quantity;
         }
-        return $this->responseWithError('bad request', 'product not found', 300);
+        $data['price'] = $price;
+        $data['count'] = count($carts);
+
+        return view('frontend.product', compact('categories', 'carts', 'data', 'product','related_products'));
     }
 
 

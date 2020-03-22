@@ -6,7 +6,8 @@ use App\Order;
 use App\OrderDetails;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Support\Facades\Redirect;
+use PDF;
 class OrderController extends Controller
 {
     public function index(){
@@ -30,6 +31,22 @@ class OrderController extends Controller
         return view('admin.order.show', compact('order'));
     }
 
+    public function invoice($id){
+        $order = Order::find($id);
+        $orderDetails = $order->orderDetails;
+        $total_price  = 0;
+        foreach ($orderDetails as $detail){
+            $total_price = $total_price + $detail->product->price * $detail->quantity;
+        }
+
+//        return $total_price;
+
+
+
+
+        $pdf = PDF::loadView('admin.order.invoice', compact('order'));
+        return $pdf->stream('invoice.pdf');
+    }
     public function destroy($id){
         $order = Order::find($id)->delete();
         $order_details = OrderDetails::where('order_id', $id)->delete();

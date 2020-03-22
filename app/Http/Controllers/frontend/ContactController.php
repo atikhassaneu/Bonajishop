@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Cart;
+use App\Category;
 use App\Contact;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -13,6 +14,7 @@ class ContactController extends Controller
     public function index(){
         $data = [];
         $price = 0;
+        $categories = Category::where('parent_id', 0)->get();
         $carts = Cart::where('session_id', session()->getId())->get();
         foreach ($carts as $cart){
             $price = $price + $cart->price;
@@ -22,7 +24,7 @@ class ContactController extends Controller
         $data['price'] = $price;
         $data['count'] = count($carts);
 
-        return view('frontend.contact', compact('carts', 'data'));
+        return view('frontend.contact', compact('carts','categories', 'data'));
     }
 
     public function store(Request $request){
